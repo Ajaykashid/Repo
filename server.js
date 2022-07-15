@@ -8,7 +8,7 @@ app.get('/home', function (req, res) {
 });
 
 app.get('/login', function (req, res) {
-	res.sendFile(__dirname + "/login.html");
+	res.sendFile(__dirname + "/public/login.html");
 });
 
 app.get('/logincheck', function (req, res) {
@@ -19,7 +19,7 @@ app.get('/logincheck', function (req, res) {
 });
 
 app.all('*', function (req, res) {
-	res.send("Invalid URL !!");
+	res.send("Invalid URL from server !!");
 });
 
 app.listen(9000, function () {
